@@ -1,0 +1,674 @@
+:root {
+    --color-white: white;
+    --color-dark1: #272727;
+    --color-dark2: #2d2d2d;
+    --color-dark3: #414141;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+    --color-purple: rgb(166, 223, 245);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+main {
+    transition: 1s;
+}
+
+#scrollToTop {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+#scrollToBottom {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+
+.content {
+    text-align: center;
+    transition: 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+#containerGuia {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    padding: 20px;
+    z-index: 500;
+}
+
+#containerGuia img {
+    width: 80%;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: "parte1"
+        "parte2"
+        "parte21"
+        "parte4"
+        "parte41";
+}
+
+#parte1 {
+    grid-area: parte1;
+    display: inline-block;
+    position: relative;
+}
+
+.img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    flex: 1;
+    -moz-transition: 2s;
+    filter: blur(2px);
+    transition: 2s;
+    z-index: 0;
+}
+
+.img:hover {
+    filter: blur(4px);
+    -moz-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+#parte1 figcaption {
+    position: absolute;
+    color: white;
+    font-size: 9vw;
+    justify-content: space-between;
+    font-family: cursive;
+}
+
+#texto1Img1 {
+    position: absolute;
+    top: 5%;
+    right: 35%;
+}
+
+#texto2Img1 {
+    position: absolute;
+    top: 8%;
+    right: 28%;
+}
+
+#texto3Img1 {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+
+#parte2 {
+    grid-area: parte2;
+    position: relative;
+}
+
+#texto1Img2 {
+    position: absolute;
+    top: 20%;
+    right: 32%;
+    z-index: 1;
+}
+
+#texto2Img2 {
+    position: absolute;
+    top: 29%;
+    right: 32%;
+    z-index: 1;
+}
+
+.btn-dark {
+    position: relative;
+    border-radius: 1000px;
+    bottom: 10vw;
+    right: 0;
+    z-index: 1;
+    color: white;
+    font-size: 7vh;
+    transition: 0.7s;
+}
+
+
+#botaoMineracao.arrow-up {
+    transform: rotate(180deg);
+}
+
+#parte21 {
+    grid-area: parte21;
+    display: none;
+    grid-template-areas: "textoParte21  empty";
+    grid-template-columns: 1fr 1fr;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    padding-bottom: 10vh;
+}
+
+#parte21 h2,
+#parte31 h2 {
+    text-align: left;
+}
+
+#textoParte21 {
+    grid-area: textoParte21;
+    text-align: left;
+    padding-left: 7%;
+}
+
+.divSeparacao {
+    background-color: var(--color-white);
+    padding: 4vh;
+}
+
+#parte3 {
+    grid-area: parte3;
+    position: relative;
+}
+
+#texto1Img3 {
+    position: absolute;
+    top: 29%;
+    right: 34%;
+    z-index: 1;
+}
+
+#texto2Img3 {
+    position: absolute;
+    top: 38%;
+    right: 36%;
+    z-index: 1;
+}
+
+#parte31 {
+    grid-area: parte31;
+    display: none;
+    grid-template-areas: "textoParte31   empty";
+    grid-template-columns: 1fr 1fr;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    padding-bottom: 10vh;
+}
+
+#textoParte31 {
+    grid-area: textoParte31;
+    text-align: left;
+    padding-left: 7%;
+}
+
+#botaoLogistica.arrow-up {
+    transform: rotate(180deg);
+}
+
+li {
+    text-decoration: none;
+}
+
+.header,
+.opcoesHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--color-dark2);
+    box-shadow: 1px 1px 4px var(--color-dark4);
+    height: 3.5em;
+    justify-content: space-between;
+    padding: 0 10%;
+    min-width: 80%;
+}
+
+.opcoesHeader {
+    gap: 1em;
+    z-index: 2;
+}
+
+.opcoesHeader a {
+    text-decoration: none;
+    color: var(--color-purple);
+    transition: 0.5s;
+    font-weight: bold;
+    background-color: var(--color-dark1);
+    padding: 12px;
+    border-radius: 50px;
+    font-size: 0.70em;
+}
+
+.opcoesHeader a:hover {
+    background-color: var(--color-dark4);
+}
+
+.active {
+    background-color: var(--color-dark4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn_header {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.btn_icon_header {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--color-dark2);
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color-white);
+    font-size: larger;
+}
+
+footer a {
+    font-size: larger;
+    text-align: center;
+}
+
+#imgRodape {
+    height: 100%;
+    max-height: 100%;
+    width: 7%;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* entrevista.html ------------------------------------------------------------------------------------- */
+
+#containerEntrevista {
+    display: grid;
+    grid-template-areas: "imgEntrevista     imgEntrevista       imgEntrevista"
+        "textoEntrevista   divSeparacaoTextos  textoEntrevista2";
+    grid-template-columns: 1fr 0.1fr 1fr;
+    max-width: 100%;
+}
+
+#containerEntrevista h2 {
+    text-align: left;
+    padding-left: 3%;
+    background-color: var(--color-purple);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vw;
+}
+
+#containerEntrevista figcaption {
+    position: absolute;
+    color: white;
+    font-size: 9vw;
+    justify-content: space-between;
+    font-family: cursive;
+}
+
+#imgEntrevista {
+    grid-area: imgEntrevista;
+    position: relative;
+}
+
+#figcaptionEntrevista {
+    top: 3vw;
+    right: 31%;
+    z-index: 1;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+#imgEntrevista img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-bottom: 3vh;
+    filter: blur(7px);
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+#imgEntrevista img:hover {
+    filter: blur(0);
+}
+
+#imgEntrevista:hover figcaption {
+    opacity: 0;
+}
+
+#textoEntrevista {
+    grid-area: textoEntrevista;
+}
+
+#textoEntrevista2 {
+    grid-area: textoEntrevista2;
+}
+
+.classeTextoEntrevista {
+    text-align: left;
+    padding-left: 3%;
+}
+
+/* projeto.html ------------------------------------------------------------------------------------- */
+
+#containerProjeto {
+    display: grid;
+    grid-template-areas: "imgProjeto     imgProjeto             imgProjeto"
+        "textoProjeto   divSeparacaoTextos     textoProjeto2";
+    grid-template-columns: 1fr 0.1fr 1fr;
+    max-width: 100%;
+}
+
+#containerProjeto h2 {
+    text-align: left;
+    padding-left: 3%;
+    background-color: var(--color-purple);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vw;
+}
+
+#containerProjeto figcaption {
+    position: absolute;
+    color: white;
+    font-size: 9vw;
+    justify-content: space-between;
+    font-family: cursive;
+}
+
+#imgProjeto {
+    grid-area: imgProjeto;
+    position: relative;
+}
+
+#figcaptionProjeto {
+    top: 8vw;
+    right: 38%;
+    z-index: 1;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+#imgProjeto img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-bottom: 3vh;
+    filter: blur(7px);
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+#imgProjeto img:hover {
+    filter: blur(0);
+}
+
+#imgProjeto:hover figcaption {
+    opacity: 0;
+}
+
+#textoProjeto {
+    grid-area: textoProjeto;
+}
+
+#textoProjeto2 {
+    grid-area: textoProjeto2;
+}
+
+.classeTextoProjeto {
+    text-align: left;
+    padding-left: 3%;
+}
+
+/* sobreNos.html ------------------------------------------------------------------------------------- */
+
+#containerSobreNos {
+    display: grid;
+    grid-template-areas: "imgGrupo     imgGrupo             imgGrupo"
+        "textoGrupo   divSeparacaoTextos   textoGrupo2";
+    grid-template-columns: 1fr 0.1fr 1fr;
+    max-width: 100%;
+}
+
+#containerSobreNos h2 {
+    text-align: left;
+    padding-left: 3%;
+    background-color: var(--color-purple);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vw;
+}
+
+#containerSobreNos figcaption {
+    position: absolute;
+    color: white;
+    font-size: 9vw;
+    justify-content: space-between;
+    font-family: cursive;
+}
+
+#imgGrupo {
+    grid-area: imgGrupo;
+    position: relative;
+}
+
+#figcaptionGrupo {
+    top: 4vw;
+    right: 34%;
+    z-index: 1;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+#imgGrupo img {
+    width: 70%;
+    top: 0;
+    padding-bottom: 2vh;
+    filter: blur(5px);
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+#imgGrupo img:hover {
+    filter: blur(0);
+}
+
+#imgGrupo:hover figcaption {
+    opacity: 0;
+}
+
+#textoGrupo {
+    grid-area: textoGrupo;
+}
+
+#textoGrupo2 {
+    grid-area: textoGrupo2;
+}
+
+.classeTextoGrupo {
+    text-align: left;
+    padding-left: 3%;
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1680px) {
+    .btn-dark {
+        bottom: 15vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1099px) {
+    .btn-dark {
+        bottom: 15vw;
+        font-size: 5vw
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #parte1 figcaption {
+        font-size: 10vw;
+    }
+
+    #parte2 {
+        grid-template-areas: "textoParte21";
+        grid-template-columns: 1fr;
+    }
+
+    #parte3 {
+        grid-template-areas: "textoParte31";
+        grid-template-columns: 1fr;
+    }
+
+    #textoParte21 {
+        padding: 3%;
+    }
+
+    #textoParte31 {
+        padding: 3%;
+    }
+
+    .btn-dark {
+        font-size: 3vh;
+        bottom: 20vw;
+    }
+
+    .btn_icon_header {
+        display: block;
+    }
+
+    .btn_header {
+        display: none;
+    }
+
+    .opcoesHeader {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    #imgRodape {
+        width: 35%;
+    }
+
+    #containerEntrevista {
+        display: grid;
+        grid-template-areas: "imgEntrevista"
+            "textoEntrevista"
+            "divSeparacaoTextos"
+            "textoEntrevista2";
+        grid-template-columns: 1fr;
+    }
+
+    #containerEntrevista p {
+        font-size: 4vw;
+    }
+
+    #containerEntrevista h2 {
+        font-size: 5vw;
+    }
+
+    #containerProjeto {
+        grid-template-areas: "imgProjeto"
+            "textoProjeto"
+            "divSeparacaoTextos"
+            "textoProjeto2";
+        grid-template-columns: 1fr;
+    }
+
+    #containerProjeto p {
+        font-size: 4vw;
+    }
+
+    #containerProjeto h2 {
+        font-size: 5vw;
+    }
+
+    #containerSobreNos {
+        grid-template-areas: "imgGrupo"
+            "textoGrupo"
+            "divSeparacaoTextos"
+            "textoGrupo2";
+        grid-template-columns: 1fr;
+    }
+
+    #containerSobreNos p {
+        font-size: 4vw;
+    }
+
+    #containerSobreNos h2 {
+        font-size: 5vw;
+    }
+
+}
+
+@keyframes SideBar {
+    from {
+        margin-left: -100vw;
+    }
+
+    top {
+        margin-left: -10vw;
+    }
+}

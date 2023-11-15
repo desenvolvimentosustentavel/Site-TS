@@ -1,0 +1,239 @@
+*{
+    margin: 5px;
+    padding: 0px;
+    }
+    #container{
+    background-color: #c0c2c7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vh 5vh 35vh 35vh;
+    grid-template-areas: "box1 box1"
+                         "box2 box2"
+                         "box3 box4"
+                         "box3 box5";
+    grid-gap: 15px; 
+    }
+    #box1{
+        grid-area: box1;
+        background-color: rgb(96, 96, 102);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr, 1fr;
+        grid-template-rows: 10vh;
+        grid-template-areas: "logo Empty Empty lupa";
+    }
+    #box2{
+        grid-area: box2;
+        background-color: rgb(127, 127, 134);
+    }
+    #box3{
+        grid-area: box3;
+        background-color: white;
+        border-width: 10px;
+        border-style: solid;
+        border-color: white;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 55vh 15vh;
+        grid-template-areas: "box3a"
+                             "box3b";
+    }
+    #box4{
+        grid-area: box4;
+        background-color: white;
+        border-width: 10px;
+        border-style: solid;
+        border-color: white;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 25vh 10vh;
+        grid-template-areas: "box4a"
+                             "box4b";
+    }
+    #box5{
+        grid-area: box5;
+        background-color: white;
+        border-width: 10px;
+        border-style: solid;
+        border-color: white;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 25vh 10vh;
+        grid-template-areas: "box5a"
+                             "box5b"; 
+    }
+    #box3a{
+        grid-area: box3a;
+        background-color: #7fffb0;
+        border: solid 2px black;
+        background-image: url('Capa-Jogo.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    #box4a{
+        grid-area: box4a;
+        background-color: #7fffb0;
+        background-image: url('Capa-Artigo1.PNG');
+        background-size: cover;
+        border: solid 2px black;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #box5a{
+        grid-area: box5a;
+        background-color: #7fffb0;
+        background-image: url('Capa-Artigo2.PNG');
+        border: solid 2px black;
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+    #box5b{
+        align-items: center;
+    }
+
+    #lupa{
+        grid-area: lupa;
+        align-items: right;
+        background-color: rgb(96, 96, 102);
+    }
+
+    .buscar-box{
+        width:80px;
+        height: 80px;
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        transition: .5s;
+    }   
+
+    .buscar-box.ativar{
+        width: 400px;
+        background-color: rgb(96, 96, 102);
+    }
+
+    .buscar-box .lupa-buscar, .buscar-box .btn-fechar{
+        min-width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: rgb(96, 96, 102);
+
+    }
+
+    .buscar-box .btn-fechar i{
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .buscar-box .lupa-buscar i{
+        font-size: 35px;
+        
+
+    }
+
+    .buscar-box .input-buscar{
+        position: absolute;
+        left: 80px;
+        width: calc(100% - 120px);
+        height: 100%;
+        line-height: 80px;
+    }
+
+    .buscar-box .input-buscar input{
+        border: 0;
+        outline: 0;
+        font-size: 15px;
+    }
+
+    #logo{
+        grid-area: logo;
+        min-width: 80px;
+        height: 80px;
+    }
+
+    h1{
+        color: rgb(255, 255, 255);
+        margin-top: 20px;
+    }
+
+    a{
+        font-size: 18px;
+        text-decoration: none;
+        background-color: rgb(162, 163, 167);
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 10px;
+        border-bottom: 5px solid rgb(76, 76, 78);
+        color: black;
+    }
+    
+    a:hover{
+        background-color: rgb(195, 197, 204);
+        box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    
+    }
+
+    #a2{
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        #box3{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            grid-template-rows: 25vh 10vh;
+        }
+
+        #box4{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        #box5{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        *{
+            margin: 0px;
+        }
+
+        h1{
+            display: none;
+        }
+        
+        #container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 15vh 5vh 35vh 35vh 35vh;
+            grid-template-areas: "box1 box1"
+                                 "box2 box2"
+                                 "box3 box3"
+                                 "box4 box4"
+                                 "box5 box5";
+        }
+        
+        a{
+            font-size: 100%;
+            text-decoration: none;
+            background-color: rgb(162, 163, 167);
+            padding: 0px;
+            font-weight: bold;
+            border-radius: 10px;
+            border-bottom: 5px solid rgb(76, 76, 78);
+            color: black;
+        }
+
+        #a2{
+            margin-top: 5px;
+        }
+    }

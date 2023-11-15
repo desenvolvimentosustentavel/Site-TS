@@ -1,0 +1,48 @@
+body{
+    background-image: url("Imagem\ Fundo.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+#Container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "Logo"
+                         "Botao";
+}
+
+#Logo{
+    padding-top: 150px;
+    grid-area: Logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Botao{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.Botao1{
+    font-size: 18px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-bottom: 5px solid rgb(194, 194, 194);
+    color: black;
+}
+
+.Botao1:hover{
+    background-color: rgb(226, 225, 225);
+    box-shadow: 0px 0px 10px white;
+
+}
+
+@media screen and (max-width: 768px) {
+
+}

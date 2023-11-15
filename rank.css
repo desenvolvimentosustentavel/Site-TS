@@ -1,0 +1,20 @@
+#titulo{
+    text-align: center;
+    background-color: rgba(153, 211, 166, 0.822);
+    border-bottom: 4px solid;
+    border-right: 5px solid;
+    border-color: rgb(85, 85, 85);   
+    color: rgb(63, 77, 90);
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#link{
+    text-decoration-line: none;
+    color: rgba(153, 211, 166, 0.822);
+}
+
+#botao{
+    margin-top: 50px;
+    margin-left: 10px;
+}

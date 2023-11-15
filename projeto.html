@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Projeto D.E.S.</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <button onclick="toggleSideBar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+
+        <a href="TS (1) (5).html">        <button class="btn_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-house-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+            </svg>
+        </button></a>
+
+        <div class="opcoesHeader" id="opcoesHeader">
+            <button onclick="toggleSideBar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+
+            <a href="index2.html"> Início </a>
+            <a href="#guia" id="guia" onclick="closeSideBar()"> Guia </a>
+            <a class="active" href="#"> Projeto </a>
+            <a href="entrevista.html"> Entrevista </a>
+            <a href="sobreNos.html"> Sobre Nós </a>
+        </div>
+    </div>
+
+    <div tabindex="0" onclick="closeSideBar()" class="content" id="content">
+        <div id="containerGuia" class="hidden">
+            <img src="guia.png">
+        </div>
+        
+        <main>
+            <div id="containerProjeto">
+                <div id="imgProjeto">
+                    <img src="projeto.png">
+                    <figcaption id="figcaptionProjeto">Projeto</figcaption>
+                </div>
+
+                <div id="textoProjeto">
+                    <h2> Introdução </h2>
+
+                    <p class="classeTextoProjeto">
+                        De acordo com o próprio site do projeto T.S. (Tecnologias Sustentáveis), “O projeto Tecnologias
+                        sustentáveis busca integrar aprendizagens da formação profissional técnica e as questões
+                        ambientais contemporâneas. O ponto de partida é a Agenda 2030 para o Desenvolvimento
+                        Sustentável.
+                    </p>
+
+                    <p class="classeTextoProjeto">
+                        A abordagem transdisciplinar justifica-se diante da própria natureza das questões ambientais,
+                        que demandam uma reflexão contextualizada, capaz de situar os diferentes interesses,
+                        necessidades sociais e da vida na Terra.”
+                    </p>
+
+                    <h2> Outros detalhes… </h2>
+
+                    <p class="classeTextoProjeto">
+                        O meio que escolhemos para implementar nosso tema foi um site, porque no nosso curso técnico
+                        possuímos uma matéria chamada PW (Programação para Web) em que nós aprendemos como criar,
+                        organizar e programar sites. Esse site contém diversos conteúdos informativos que ao longo do
+                        projeto desenvolvemos, como um Guia de Descarte do Lixo Eletrônico, locais de descarte do
+                        e-lixo, um Podcast tratando o tema de mineração urbana, e conceitos sobre lixo eletrônico,
+                        mineração urbana e logística reversa.
+                    </p>
+                </div>
+
+                <div id="divSeparacaoTextos">
+
+                </div>
+
+                <div id="textoProjeto2">
+                    <h2> Objetivos </h2>
+
+                    <p class="classeTextoProjeto">
+                        O objetivo principal do projeto T.S. é desenvolver um protótipo ou um produto que viabilize o
+                        alcance de pelo menos dois ou mais Objetivos de Desenvolvimento Sustentável da Agenda 2030,
+                        visando a área dos cursos técnicos oferecidos pelo CEFET-MG Campus Timóteo, e que esteja de
+                        acordo com a realidade local
+                    </p>
+
+                    <p class="classeTextoProjeto">
+                        Sabendo disso, o nosso grupo, composto por Daniel Henrique Marcelino Campos, Diego Rodrigues
+                        Ferreira De Sousa, Miguel Assis Perdigão, Ramon de Castro Silva Filho e Renan Jordão Barcelos,
+                        teve que tomar sua iniciativa e começar a pensar em nosso projeto, e seguindo a lógica de que
+                        estudamos no curso de Desenvolvimento de Sistemas, pensamos em abordar o tema “Descarte do Lixo
+                        Eletrônico”, e posteriormente também o tema da logística reversa, e a mineração urbana.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <img id="imgRodape" src="image1_0.jpg">
+            <a> Descarte Eletrônico Sustentável © </a>
+        </footer>
+    </div>
+
+</body>
+
+<script src="js.js"> </script>
+
+</html>
