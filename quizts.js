@@ -98,7 +98,7 @@ const questoes = [
 
 let qestaoindex = 0;
 
-const tempoTotal = 300;
+const tempoTotal = 600;
 let tempoRestante = tempoTotal;
 let tempoMinutos, tempoSegundos;
 
